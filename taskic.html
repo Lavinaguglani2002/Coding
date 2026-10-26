@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    *{
+        box-sizing: border-box;
+        
+    }
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: azure;
+        
+    }
+    button{
+        background-color: white;
+        color: black;
+        margin: 5px;
+            padding: 15px;
+            flex: 1;
+            border-radius: 10px;
+            font-size: 20px;
+            cursor: pointer;
+
+       
+             
+    }
+    .calculator{
+        width: 400px;
+        padding: 40px;
+        background-color: black;
+            border-radius: 15px;
+    }
+    .display {
+            width: 100%;
+            height: 60px;
+            margin-bottom: 15px;
+            padding: 10px;
+            font-size: 30px;
+            text-align: right;
+            background-color: white;
+            border: none;
+        }
+        .row{
+            display: flex;
+        }
+        /* //Available space ko equally share karo */
+         button:hover {
+            background-color: #ddd;
+        }
+</style>
+<body>
+    <div>
+        <h1 style="text-align: center;">Calculator</h1>
+
+        <div class="calculator">
+
+            <input class="display" type="text" value="0" readonly>
+
+            <div class="row">
+                <button>%</button>
+                <button>CE</button>
+                <button>C</button>
+                <button>/</button>
+            </div>
+
+            <div class="row">
+                <button>1/x</button>
+                <button>x²</button>
+                <button>&radic;x</button>
+                <button>*</button>
+            </div>
+
+            <div class="row">
+                <button>7</button>
+                <button>8</button>
+                <button>9</button>
+                <button>-</button>
+            </div>
+
+            <div class="row">
+                <button>4</button>
+                <button>5</button>
+                <button>6</button>
+                <button>+</button>
+            </div>
+
+            <div class="row">
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>=</button>
+            </div>
+
+            <div class="row">
+                <button>+/-</button>
+                <button>0</button>
+                <button>.</button>
+                <button>00</button>
+            </div>
+
+        </div>
+    </div>
+    
+</body>
+</html>

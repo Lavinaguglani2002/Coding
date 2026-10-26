@@ -1,0 +1,34 @@
+ * {
+    box-sizing: border-box;
+   
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+} 
+
+.container {
+    display: flex;
+    width: 90%;
+    margin: 20px auto;
+}
+
+.left {
+    width: 30%;
+    padding: 20px;
+    background-color: lightblue;
+    text-align: left;
+}
+
+.right {
+    width: 70%;
+    padding: 20px;
+    background-color: white;
+}
+
+.profile {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}

@@ -1,0 +1,213 @@
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Full Page */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #eef2ff, #dbeafe);
+    min-height: 100vh;
+    padding: 40px 20px;
+    color: #1e293b;
+}
+
+/* Main Container */
+.container {
+    max-width: 850px;
+    margin: auto;
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 10px 35px rgba(30, 58, 138, 0.12);
+}
+
+/* Headings */
+h1 {
+    text-align: center;
+    color: #1e3a8a;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #1e3a8a;
+    margin-top: 30px;
+    margin-bottom: 18px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e0e7ff;
+}
+
+/* Input Form */
+.form {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+input {
+    flex: 1;
+    min-width: 130px;
+    padding: 13px 15px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    font-size: 15px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px #6366f122;
+}
+
+/* All Buttons */
+button {
+    padding: 11px 16px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+/* Add Student Button */
+.form button {
+    background: #4f46e5;
+}
+
+.form button:hover {
+    background: #3730a3;
+}
+
+/* Student Card */
+.student {
+    background: #f8faff;
+    border: 1px solid #e0e7ff;
+    border-left: 5px solid #6366f1;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 16px;
+    box-shadow: 0 4px 12px rgba(30, 58, 138, 0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.student:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(30, 58, 138, 0.1);
+}
+
+/* Student Name */
+.student h3 {
+    color: #1e3a8a;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+/* Student Details */
+.student p {
+    margin: 8px 0;
+    color: #475569;
+    line-height: 1.5;
+}
+
+/* Present Button */
+.student button[onclick*="Present"] {
+    background: #16a34a;
+}
+
+.student button[onclick*="Present"]:hover {
+    background: #15803d;
+}
+
+/* Absent Button */
+.student button[onclick*="Absent"] {
+    background: #dc2626;
+}
+
+.student button[onclick*="Absent"]:hover {
+    background: #b91c1c;
+}
+
+/* Delete Button */
+.student button[onclick*="deleteStudent"] {
+    background: #64748b;
+}
+
+.student button[onclick*="deleteStudent"]:hover {
+    background: #334155;
+}
+
+/* Attendance Summary */
+.container > p {
+    background: #f1f5f9;
+    padding: 13px 16px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    color: #334155;
+}
+
+#total {
+    color: #4f46e5;
+    font-weight: bold;
+}
+
+#present {
+    color: #16a34a;
+    font-weight: bold;
+}
+
+#absent {
+    color: #dc2626;
+    font-weight: bold;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+    body {
+        padding: 15px 10px;
+    }
+
+    .container {
+        padding: 22px 16px;
+        border-radius: 14px;
+    }
+
+    h1 {
+        font-size: 24px;
+        line-height: 1.4;
+    }
+
+    .form {
+        flex-direction: column;
+    }
+
+    .form input,
+    .form button {
+        width: 100%;
+    }
+
+    .student {
+        padding: 16px;
+    }
+
+    .student button {
+        margin-top: 5px;
+    }
+}

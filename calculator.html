@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        display: flex;
+        align-items: center; 
+        /* vertical-top to bottom */
+        justify-content: center;
+        /* horizontal left-to right */
+    }
+    .container{
+        width:300px;
+    padding: 50px; 
+border-radius:20px; 
+background-color: black;
+  }
+    .row{
+        display: flex;
+    }
+    button{
+        margin:5px;
+        width:60px;
+        border-radius: 10px;
+        font-size: 18px;
+        padding: 15px;
+        flex:1;
+    
+    }
+   .display {
+    height: 60px;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: right;
+    font-size: 25px;
+    border-radius: 16px;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+</style>
+<body>
+
+    <div class="container">
+
+        <input type="text" value="0" class="display" readonly id="cal">
+        <div class="row"><button onclick="fun('%')">%</button>
+            <button onclick="clearDisplay()">AC</button>
+            <button onclick="deletelast()">DEL</button>
+            <button onclick="fun('/')">/</button></div>
+        <div class="row"> <button onclick="fun('1/x')">1/x</button>
+            <button onclick="fun('x^2')">x^2</button>
+            <button onclick="fun('*')">*</button></div>
+        <div class="row">
+            <button onclick="fun(7)">7</button>
+            <button onclick="fun(8)">8</button>
+            <button onclick="fun(9)">9</button>
+            <button onclick="fun('-')">-</button>
+        </div>
+        <div class="row">
+            <button onclick="fun(4)">4</button>
+            <button onclick="fun(5)">5</button>
+            <button onclick="fun(6)">6</button>
+            <button onclick="fun('+')">+</button>
+        </div>
+        <div class="row"><button onclick="fun(1)">1</button>
+            <button onclick="fun(2)">2</button>
+            <button onclick="fun(3)">3</button>
+            <button onclick="solve()">=</button></div>
+        <div class="row">
+            <button onclick="fun(0)">0</button>
+            <button onclick="fun('.')">.</button>
+            <button onclick="fun('00')">00</button></div>
+
+    </div>
+    
+</body>
+
+<script>
+    function fun(value){
+        let display=document.getElementById("cal");
+        if(value=="1/x"){
+            display.value=1/Number(display.value)
+        }else if(value=="x^2"){
+            display.value=Number(display.value)**2
+        }else if(value=="%"){
+            display.value=Number(display.value)/100;
+        }else{
+            if(display.value=='0'){
+                display.value=value;
+            }else{
+                display.value+=value;
+            }
+        }
+    }
+
+    function solve(){
+        let display=document.getElementById("cal");
+        display.value=eval(display.value)
+    }
+    function clearDisplay(){
+        document.getElementById("cal").value="0"
+    }
+    function deletelast(){
+       let display= document.getElementById("cal")
+         display.value=display.value.slice(0,-1)
+        if(display.value==""){
+            display.value="0";
+        }
+    }
+
+
+    //slice(start,end)--[-1,-2,-3,-4,-5]-(2,)-[1,2,3,4] positive element-0 left side and negative elements -1 from right side
+</script>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .red{
+        color: red;
+        background-color: black;
+        border:3px solid white;
+        padding: 40px;
+        width:100px;
+    }
+</style>
+<body>
+
+    <!-- Events onclick,onmouseover,onkeypress,onchange,onkeydown -->
+
+    <!-- <h2 onclick="alert('Hello world')">Heading</h2> -->
+
+
+    <h2 id="heading">Heading1</h2>
+    <button onclick="showmessage()">Click Me</button>
+
+
+    <h3 onmouseover="alert('hi')">Heading2</h3>
+
+    <!-- onchange -->
+
+    <select id="course" onchange="showcourse()" >
+        <option value="">Select Course</option>
+                <option value="html">HTML</option>
+        <option value="CSS"> CSS</option>
+        <option value="Javascript">Javascript</option>
+
+    </select>
+    <!-- <p id="result">Your course will appear</p> -->
+
+
+
+
+    <h2 id="message">Submit ur Assignment</h2>
+    <button id="submitbtn" onclick="submitassignment()">Submit</button>
+
+    <!-- <input type="text" placeholder="enter u name" onkeydown="alert('Hlo world')"> -->
+
+    <form id="myform">
+        <lable>Enter ur name</lable>
+        <input type="text" id="studentName">
+        <button type="submit">Submit Form</button>
+        <p id="result"></p>
+
+
+
+        <div id="box">Hello
+<span style="display: none;">World</span>
+
+        </div>
+
+
+    </form>
+
+
+
+    <h2 id="heading">My Website</h2>
+    <button id="btn">Click Me</button>
+    <p id="result"></p>
+
+
+
+    <h3 id="heading2">Hello students</h3>
+    <button id="btn1">Click Me</button>
+    <button id="remove1">Remove event</button>
+
+
+    <h4 id="heading4">Hello everyone</h4>
+    <button onclick="changecolor()">Change Color</button>
+
+
+
+    <form onsubmit="stopform(event)">
+        <input type="text" placeholder="enter ur name">
+        <button type="submit">Submit</button>
+    </form>
+</body>
+<script src="events.js"></script>
+</html>

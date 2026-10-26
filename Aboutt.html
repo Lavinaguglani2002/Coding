@@ -1,0 +1,206 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Smart Attendance</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #eef2ff;
+            color: #1e293b;
+        }
+
+       
+
+        .sidebar {
+            width: 230px;
+            height: 100vh;
+            background: #3730a3;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 30px 20px;
+        }
+
+        .sidebar h2 {
+            color: white;
+            font-size: 21px;
+            margin-bottom: 35px;
+        }
+
+        .sidebar a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 14px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+        }
+
+        .sidebar a:hover {
+            background: #4f46e5;
+        }
+
+        .sidebar a.active {
+            background: #4f46e5;
+        }
+
+    
+
+        .main {
+            margin-left: 230px;
+            padding: 40px;
+        }
+
+        .about-box {
+            background: white;
+            padding: 40px;
+            border-radius: 18px;
+            box-shadow: 0 10px 30px rgba(79, 70, 229, 0.10);
+        }
+
+        h1 {
+            color: #3730a3;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .about-box p {
+            color: #475569;
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #3730a3;
+            margin: 25px 0 15px;
+        }
+
+        .feature {
+            background: #f8faff;
+            border-left: 4px solid #6366f1;
+            padding: 15px;
+            margin-bottom: 12px;
+            border-radius: 8px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #64748b;
+        }
+
+  
+        @media (max-width: 650px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+                padding: 20px;
+            }
+
+            .sidebar h2 {
+                margin-bottom: 15px;
+            }
+
+            .main {
+                margin-left: 0;
+                padding: 20px;
+            }
+
+            .about-box {
+                padding: 25px 20px;
+            }
+
+            h1 {
+                font-size: 27px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <div class="sidebar">
+
+        <h2>Smart Attendance</h2>
+
+        <a href="home.html">🏠 Home</a>
+        <a href="aboutt.html" class="active">ℹ️ About Us</a>
+        <a href="Attendance.html">📋 Attendance</a>
+        <a href="contact.html">📞 Contact</a>
+
+    </div>
+
+   
+    <div class="main">
+
+        <div class="about-box">
+
+            <h1>About Our Project</h1>
+
+            <p>
+                Smart Attendance Tracker System is a simple web-based
+                project designed to make student attendance management
+                easier and more organized.
+            </p>
+
+            <p>
+                It allows users to add student details, mark attendance,
+                edit or delete student records, search for students and
+                view attendance summaries.
+            </p>
+
+            <h2>Our Main Features</h2>
+
+            <div class="feature">
+                <strong>Student Management</strong>
+                <p>Add, edit, delete and search student records.</p>
+            </div>
+
+            <div class="feature">
+                <strong>Attendance Management</strong>
+                <p>Mark students as Present or Absent.</p>
+            </div>
+
+            <div class="feature">
+                <strong>Attendance Summary</strong>
+                <p>View the total number of students, present students
+                and absent students.</p>
+            </div>
+
+            <div class="feature">
+                <strong>Local Storage</strong>
+                <p>Save student records in the browser using JavaScript
+                LocalStorage.</p>
+            </div>
+
+            <h2>Our Goal</h2>
+
+            <p>
+                Our goal is to provide a simple and user-friendly way
+                to maintain student attendance records digitally.
+            </p>
+
+        </div>
+
+        <footer>
+            <p>© 2026 Smart Attendance Tracker System</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>

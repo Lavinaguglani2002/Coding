@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to right, #74ebd5, #acb6e5);
+        margin: 0;
+        padding: 20px;
+    }
+
+    h1 {
+        color: #333;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    form {
+        max-width: 700px;
+        margin: 20px auto;
+        padding: 25px;
+        background-color: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    fieldset {
+        border: 2px solid #6c63ff;
+        border-radius: 8px;
+        padding: 20px;
+    }
+
+    legend {
+        font-size: 20px;
+        font-weight: bold;
+        color: #6c63ff;
+        padding: 5px 10px;
+    }
+
+    label {
+        display: block;
+        margin-top: 15px;
+        margin-bottom: 7px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="number"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="date"],
+    input[type="datetime-local"],
+    select,
+    textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 15px;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+        outline: none;
+        border-color: #6c63ff;
+        box-shadow: 0 0 5px rgba(108, 99, 255, 0.4);
+    }
+
+    input[type="checkbox"],
+    input[type="radio"] {
+        accent-color: #6c63ff;
+        margin: 10px 5px;
+    }
+
+    input[type="color"] {
+        display: block;
+        width: 60px;
+        height: 40px;
+        margin: 5px 0 10px;
+        cursor: pointer;
+    }
+
+    input[type="file"] {
+        display: block;
+        margin: 10px 0;
+        max-width: 100%;
+    }
+
+    input[type="range"] {
+        width: 100%;
+        accent-color: #6c63ff;
+        margin: 10px 0;
+    }
+
+    textarea {
+        resize: vertical;
+    }
+
+    button {
+        display: block;
+        width: 100%;
+        padding: 12px;
+        margin-top: 20px;
+        background-color: #6c63ff;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        background-color: #4834d4;
+    }
+
+    @media (max-width: 600px) {
+        body {
+            padding: 10px;
+        }
+
+        form {
+            padding: 15px;
+        }
+
+        fieldset {
+            padding: 12px;
+        }
+    }
+</style>
+
+<body>
+    <div>
+        <h1 style="text-align: center;">Registration Form</h1>
+        <form action="" method="get">
+            <fieldset>
+                <legend>Form</legend>
+                
+                <!-- Name Field -->
+                <label for="nam">UserName</label> 
+                <input type="text" id="nam" name="username">
+
+                <!-- Password Field -->
+                <label for="pass">Password</label> 
+                <input type="password" id="pass" name="password">
+
+                <!-- Number Field -->
+                <label for="num">Number</label>
+                <input type="number" id="num" name="number">
+
+                <!-- Email Field -->
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email">
+
+                <!-- Color Field -->
+                <label>Color</label>
+                <input type="color" name="favcolor">
+
+                <!-- Datetime Field -->
+                <label>Datetime</label>
+                <input type="datetime-local" name="meetingtime">
+
+                <!-- Checkboxes -->
+                <label>Skills</label>
+                <input type="checkbox" name="skill" value="html">HTML
+                <input type="checkbox" name="skill" value="css">CSS
+                <input type="checkbox" name="skill" value="react">React 
+
+                <!-- Radio Buttons -->
+                <label>Gender</label>
+                <input type="radio" name="gender" value="male">Male
+                <input type="radio" name="gender" value="female">Female
+                <input type="radio" name="gender" value="other">Other
+
+                <!-- Select Dropdown -->
+                <label>Branch</label>
+                <select name="education" id="education">
+                    <option value="cse">CSE</option>
+                    <option value="ece">ECE</option>
+                    <option value="ee">EE</option>
+                </select>
+
+                <!-- Range Slider -->
+                <label for="vol">Volume</label>
+                <input type="range" id="vol" min="0" max="100" step="10" name="vol">
+
+                <!-- Contact Number -->
+                <label>Contact Number</label>
+                <input type="tel" name="contact" pattern="[0-9]{10}" maxlength="10" >
+
+                <!-- File Upload -->
+                <label>Photograph</label>
+                <input type="file" name="photo">
+
+                <!-- Textarea -->
+                <label for="feedback">Textarea</label>
+                <br>
+                <textarea id="feedback" name="feedback" rows="5" cols="8" placeholder="enter ur feedback"></textarea>
+
+                <!-- Submit Button -->
+                <button type="submit">Submit</button>
+            </fieldset>
+        </form>
+    </div>
+
+
+
+</body>
+</html>
